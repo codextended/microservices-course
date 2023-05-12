@@ -1,5 +1,6 @@
 package dev.codextended.employeeservice.resource;
 
+import dev.codextended.employeeservice.dto.APIResponseDto;
 import dev.codextended.employeeservice.dto.EmployeeDto;
 import dev.codextended.employeeservice.service.EmployeeService;
 import lombok.RequiredArgsConstructor;
@@ -20,7 +21,7 @@ public class EmployeeResource {
     }
 
     @GetMapping("{employeeId}")
-    public ResponseEntity<EmployeeDto> findEmployee(@PathVariable(value = "employeeId") Long employeeId) {
+    public ResponseEntity<APIResponseDto> findEmployee(@PathVariable(value = "employeeId") Long employeeId) {
         return new ResponseEntity<>(employeeService.findEmployee(employeeId), HttpStatus.OK);
     }
 }

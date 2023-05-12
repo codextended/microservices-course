@@ -29,4 +29,5 @@ public class Employee {
     @NotEmpty(message = "Email can't be empty")
     @Email(message = "Must provide an email")
     private String email;
+    private String departmentCode;
 }
